@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>BICE MECHATROTECH</title>
   </head>
   <body>
@@ -159,7 +164,26 @@
       </section>
       <section class="projects">
         <p class="subtitle">Our current project</p>
-        <img src="public/placeholder.png" alt="" srcset="" />
+        <div class="project-card">
+          <img
+            class="project-image"
+            src="public/placeholder.png"
+            alt="project inage"
+          />
+          <div class="project-info">
+            <p class="info-title">Re-innovated energy meter</p>
+            <span class="info-texts">
+              Text placeholder that explain briefly this projects of energy
+              meter. Text placeholder that explain briefly this projects of
+              energy meter......
+            </span>
+          </div>
+        </div>
+        <button class="see-more-btn">
+          <span>See More</span>
+          <i class="icons see-more bx bx-up-arrow-alt "></i>
+          <!-- <box-icon class="icons see-more" name='up-arrow-alt' ></box-icon> -->
+        </button>
       </section>
     </main>
   </body>
