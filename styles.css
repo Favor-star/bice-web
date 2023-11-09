@@ -33,7 +33,7 @@ body {
 .chat-with-us {
   position: sticky;
   top: 90vh;
-  margin-left: 85vw !important;
+  margin-left: 85% !important;
   width: 60px;
   aspect-ratio: 1;
   display: flex;
