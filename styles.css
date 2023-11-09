@@ -18,13 +18,61 @@
   --subtitle: 20px;
   --smShadow: 5px 5px 15px #00000060;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 5px;
+  user-select: none;
+}
+.chat-with-us {
+  position: sticky;
+  top: 90vh;
+  margin-left: 85vw;
+  width: 60px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  /* transform: translateX(95%); */
+  z-index: 1;
+  /* animation: grow 2s ease-in-out infinite; */
+}
+.chat-with-us .icons {
+  font-size: 48px;
+  color: var(--blue) !important;
+}
+.chat-with-us:hover::before{
+content: "Chat with Us";
+width: fit-content;
+color: var(--blue);
+font-weight: 700;
+width: 100px;
+font-style: italic;
+
+}
+@keyframes grow {
+  0% {
+    box-shadow: 0 0 10px 0px #00000042;
+  }
+  25% {
+    box-shadow: 0 0 10px 4px var(--black);
+  }
+  50% {
+    box-shadow: 0 0 10px 6px var(--black);
+  }
+  75% {
+    box-shadow: 0 0 10px 4px var(--black);
+  }
+  100% {
+    box-shadow: 0 0 0 0px var(--black);
+  }
 }
 main {
   display: flex;
@@ -40,19 +88,21 @@ main {
   position: relative;
 }
 header {
-  max-width: 54rem;
-  width: 100%;
+ 
+  max-width: calc(1024px - 10vw);
+  width: calc(100% - 10vw);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-left: 5vw;
+  margin: 0 5vw;
 }
 .logo {
   color: var(--black);
   /* font-family: var(--font); */
   font-weight: 700;
   font-size: 1.5rem;
+
 }
 .nav {
   display: flex;
@@ -138,7 +188,10 @@ header {
   border: 3px solid var(--blue);
 }
 .about-us {
+  max-width: 1024px;
+  width: 100%;
   min-height: 241px;
+  flex-shrink: 1;
   background: linear-gradient(
     91deg,
     #14b040 21.27%,
@@ -161,8 +214,8 @@ header {
   margin-left: 5vw;
 }
 .about-us-imgs {
+  margin-right: 100px;
   display: flex;
-  flex: 1;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
@@ -170,16 +223,15 @@ header {
 .img-card {
   margin-right: -55px;
   transform: translateX(50px);
-}
-.img-card {
   display: block;
   width: 150px;
   height: 107px;
-
+}
+.img-card {
   position: relative;
 }
 .img-shape {
-  position: absolute;
+  position: relative;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -241,7 +293,7 @@ header {
 .review-mainBox {
   display: flex;
   flex-wrap: wrap;
-  max-width: 749px;
+  max-width: 800px;
   width: 100%;
   justify-content: center;
   gap: 1vw;
@@ -252,7 +304,6 @@ header {
   max-width: 238px;
   width: 100%;
   min-height: 205px;
-
   padding: 29px 26px;
   flex-direction: column;
   justify-content: space-between;
@@ -261,6 +312,9 @@ header {
   border-radius: 20px;
   border: 2px solid var(--black);
   background: var(--white);
+  transition: 0.2s;
+  cursor: pointer;
+  user-select: none;
 }
 .review-box:hover {
   background-color: var(--green);
@@ -334,6 +388,7 @@ header {
   gap: 10px;
   border-radius: 10px;
   border: 2px solid var(--blue);
+  transition: 0.5s;
 }
 .see-more-btn span:first-of-type {
   color: var(--blue);
@@ -363,12 +418,11 @@ header {
   display: flex;
   flex-direction: column;
   max-width: 859px;
-  width: 100vw;
+  width: calc(100% - 5vw);
   height: 120px;
   align-items: flex-start;
   padding: 10px;
   margin-left: 5vw;
-
   margin-top: 65px;
   border-radius: 10px;
   background: var(--green);
@@ -393,7 +447,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start
+  align-items: flex-start;
 }
 .faq {
   display: flex;
@@ -462,5 +516,168 @@ header {
   background-color: var(--blue);
   color: var(--white);
   float: right;
- font-size: 16px;
+  font-size: 16px;
+  transition: 0.2s;
+}
+.message-us button:hover {
+  box-shadow: var(--smShadow), 0 0 0 2px var(--white), 0 0 0 4px var(--blue);
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2vw 5vw;
+  width: 100%;
+  max-width: 1024px;
+  background: var(--dark-green);
+}
+.footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* width: 33.33%; */
+}
+.footer .footer-content .subtitle {
+  color: var(--white) !important;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer-nav-link {
+  text-decoration: none;
+  color: var(--white);
+  font-style: italic;
+  font-size: 14px;
+  /* font-weight: 400; */
+}
+.footer-contact-us p {
+  color: white;
+  font-weight: 400;
+}
+.footer-subtitle {
+  text-align: left;
+}
+.numbers {
+  gap: 2px !important;
+}
+.back-to-top {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.back-to-top-title {
+  text-decoration: none;
+  color: var(--white);
+}
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.subscribe-title {
+  font-size: 14px;
+  color: var(--white);
+}
+.subscribe-btn {
+  margin-left: 5px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-family: var(--font);
+  font-weight: 600;
+  color: var(--white);
+  font-size: 14px;
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+}
+.subscribe-inputs {
+  display: flex;
+  flex-shrink: 0;
+}
+.subscribe-inputs input {
+  padding: 10px;
+  font-size: 14px;
+  color: var(--black);
+  border-radius: 8px;
+  border: 1px solid var(--white);
+  width: 244px;
+}
+.subscribe-inputs input:focus {
+  border: 1px solid var(--blue);
+  outline: 2px solid var(--blue);
+}
+.terms-and-conditions {
+  display: flex;
+  gap: 1px;
+  margin-top: 3px;
+  align-items: center;
+}
+.terms {
+  font-size: 12px;
+  color: var(--white);
+  user-select: none;
+}
+.terms a {
+  color: var(--blue);
+  font-style: italic;
+}
+.terms a:hover {
+  font-style: italic;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 1px;
+  padding: 0.5px;
+  transition: 0.2s;
+}
+#check {
+  width: 19px;
+  height: 19px;
+  background: var(--dark-green);
+}
+/* from GPT for checkbox customization*/
+input[type="checkbox"] {
+  display: none;
+}
+.terms {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.terms:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 19px;
+  height: 19px;
+  border: 1px solid white;
+  background-color: inherit;
+  border-radius: 3px;
+}
+input[type="checkbox"]:checked + .terms:before {
+  content: "\2713";
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: inherit;
+}
+@media screen and (max-width: 800px) {
+  .footer {
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  .footer-content:nth-of-type(3) {
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+  }
 }

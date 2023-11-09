@@ -15,13 +15,16 @@
   </head>
   <body>
     <main>
-      <section class="home">
+      <div class="chat-with-us">
+        <i class="icons bx bx-conversation bx-tada"></i>
+      </div>
+      <section class="home" id="home">
         <header>
           <h1 class="logo">BICE MECHATROTECH</h1>
           <nav class="nav">
-            <a class="nav-Element" href="#">About US</a>
-            <a class="nav-Element" href="#">Projects</a>
-            <a class="nav-Element" href="#">Contact Us</a>
+            <a class="nav-Element" href="#about-us">About US</a>
+            <a class="nav-Element" href="#projects">Projects</a>
+            <a class="nav-Element" href="#contact-us">Contact Us</a>
           </nav>
         </header>
         <img class="bg-image" src="public/bg.png" alt="Background image" />
@@ -40,7 +43,7 @@
           <button class="welcome-btns-elem" id="view-more">View more</button>
         </span>
       </section>
-      <section class="about-us">
+      <section class="about-us" id="about-us">
         <div class="about-us-texts">
           We are a group of 5 people who are committed to making technological
           changes.
@@ -163,7 +166,7 @@
           </span>
         </div>
       </section>
-      <section class="projects">
+      <section class="projects" id="projects">
         <p class="subtitle">Our current project</p>
         <div class="project-card">
           <img
@@ -192,9 +195,9 @@
         </p>
         <p class="quote-title">— Henry David Thoreau</p>
       </section>
-      <section class="contact-us">
+      <section class="contact-us" id="contact-us">
         <span class="faq">
-          <p class="subtitle">Frequentlu Asked Questions (FAQs)</p>
+          <p class="subtitle">Frequently Asked Questions (FAQs)</p>
           <div class="faq-question" id="faq-question-1">
             whom exactly are we?
             <i class="icons bx bx-chevron-down"></i>
@@ -269,6 +272,7 @@
           <span class="input-elem">
             <label for="more"> Tell Us More</label>
             <textarea
+              placeholder="Tell us more"
               class="inputs"
               name=""
               id=""
@@ -280,6 +284,82 @@
           </span>
           <button>Send Message</button>
         </span>
+      </section>
+      <section class="footer">
+        <div class="footer-content">
+          <p class="subtitle footer-subtitle">Bice Mechatrotech</p>
+          <span class="footer-nav">
+            <a href="#about-us" class="footer-nav-link">About Us</a
+            ><a href="#projects" class="footer-nav-link">Projects</a
+            ><a href="#contact-us" class="footer-nav-link">Contact Us</a>
+          </span>
+          <span class="footer-contact-us">
+            <p>Reach us through</p>
+            <span class="footer-icons-elem">
+              <i class="icons bx bxl-gmail" style="color: #ffffff"></i>
+              <i
+                class="icons bx bxl-whatsapp-square"
+                style="color: #ffffff"
+              ></i>
+            </span>
+          </span>
+        </div>
+        <div class="footer-content">
+          <p class="subtitle footer-subtitle">Address</p>
+          <span class="footer-nav">
+            <a href="" class="footer-nav-link">KK 369 St</a
+            ><a href="" class="footer-nav-link">KK 15 Rd, Kicukiro</a
+            ><a href="" class="footer-nav-link">Kigali, Rwanda</a>
+          </span>
+          <span class="footer-contact-us">
+            <p>Call us on:</p>
+            <span class="footer-nav numbers">
+              <a href="" class="footer-nav-link"
+                >+250 787 000 000/+250 787 000 000</a
+              ><a href="" class="footer-nav-link"
+                >+250 787 000 000/+250 787 000 000</a
+              ><a href="" class="footer-nav-link"
+                >+250 787 000 000/+250 787 000 000</a
+              >
+            </span>
+          </span>
+        </div>
+        <div class="footer-content">
+          <div class="back-to-top">
+            <a href="#home">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+              >
+                <path
+                  d="M27.5 21.0351V45.0001H32.5V21.0351L43.2325 31.7676L46.7675 28.2326L30 11.4651L13.2325 28.2326L16.7675 31.7676L27.5 21.0351Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+
+            <a href="#home" class="back-to-top-title">Back to Top</a>
+          </div>
+          <div class="subscribe">
+            <label for="subscribe-email" class="subscribe-title"
+              >Subscribe to our blog</label
+            >
+            <span class="subscribe-inputs">
+              <input type="email" name="" id="subscribe-email" />
+              <button class="subscribe-btn">subscribe</button>
+            </span>
+            <span class="terms-and-conditions">
+              <input type="checkbox" id="myCheckbox" />
+              <label class="terms" for="myCheckbox"
+                >By clicking here, you agree to the
+                <a href="">terms and conditions</a>.</label
+              >
+            </span>
+          </div>
+        </div>
       </section>
     </main>
   </body>
