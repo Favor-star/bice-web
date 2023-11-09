@@ -33,7 +33,7 @@ body {
 .chat-with-us {
   position: sticky;
   top: 90vh;
-  margin-left: 85vw;
+  margin-left: 85vw !important;
   width: 60px;
   aspect-ratio: 1;
   display: flex;
@@ -44,18 +44,17 @@ body {
   z-index: 1;
   /* animation: grow 2s ease-in-out infinite; */
 }
-.chat-with-us .icons {
+.chat-with-us #icon {
   font-size: 48px;
   color: var(--blue) !important;
 }
-.chat-with-us:hover::before{
-content: "Chat with Us";
-width: fit-content;
-color: var(--blue);
-font-weight: 700;
-width: 100px;
-font-style: italic;
-
+.chat-with-us:hover::before {
+  content: "Chat with Us";
+  width: fit-content;
+  color: var(--blue);
+  font-weight: 700;
+  width: 100px;
+  font-style: italic;
 }
 @keyframes grow {
   0% {
@@ -88,7 +87,6 @@ main {
   position: relative;
 }
 header {
- 
   max-width: calc(1024px - 10vw);
   width: calc(100% - 10vw);
   display: flex;
@@ -102,7 +100,6 @@ header {
   /* font-family: var(--font); */
   font-weight: 700;
   font-size: 1.5rem;
-
 }
 .nav {
   display: flex;
