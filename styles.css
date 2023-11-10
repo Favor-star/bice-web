@@ -182,6 +182,25 @@ header {
   background-color: var(--white);
   border: 3px solid var(--blue);
 }
+.social-media-icons {
+  opacity: 0;
+  display: inline-flex;
+  padding: 5px 20px;
+  align-items: flex-start;
+  gap: 14px;
+  border-radius: 15px;
+  border: 1px solid var(--blue);
+  position: absolute;
+  top: calc(100vh - 100px);
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+
+}
+.social-icons {
+  font-size: 24px;
+  color: var(--blue);
+}
 .about-us {
   max-width: 1024px;
   width: 100%;
@@ -727,6 +746,9 @@ input[type="checkbox"]:checked + .terms:before {
 }
 
 @media only screen and (max-width: 800px) {
+  .social-media-icons{
+opacity: 1;
+  }
   .footer {
     flex-wrap: wrap;
     align-items: flex-end;
@@ -762,6 +784,9 @@ input[type="checkbox"]:checked + .terms:before {
   }
   nav {
     display: none !important;
+  }
+  .welcome {
+    z-index: 999;
   }
   .bg-image {
     flex: 1;
