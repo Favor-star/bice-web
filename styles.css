@@ -57,23 +57,7 @@ body {
   width: 100px;
   font-style: italic;
 }
-@keyframes grow {
-  0% {
-    box-shadow: 0 0 10px 0px #00000042;
-  }
-  25% {
-    box-shadow: 0 0 10px 4px var(--black);
-  }
-  50% {
-    box-shadow: 0 0 10px 6px var(--black);
-  }
-  75% {
-    box-shadow: 0 0 10px 4px var(--black);
-  }
-  100% {
-    box-shadow: 0 0 0 0px var(--black);
-  }
-}
+
 main {
   display: flex;
   flex-direction: column;
@@ -83,6 +67,16 @@ main {
   position: relative;
   /* border: 2px dashed black; */
   margin-top: 20px;
+}
+main::after {
+  content: "Copyright 2023 \00a9  Bice Mechatrotech, All rights reserved";
+  text-align: center;
+  font-size: 12px;
+  color: var(--white);
+  font-style: italic;
+  font-weight: 400;
+  flex-shrink: 0;
+  background: var(--dark-green);
 }
 .home {
   position: relative;
@@ -527,18 +521,20 @@ header {
   flex-direction: row;
   flex: 1;
   justify-content: space-between;
-gap: 3vh;
-  padding: 2vw 5vw;
+  gap: 3vh;
+  padding: 5vw 5vw 1vw 5vw;
   width: 100%;
   max-width: 1024px;
   background: var(--dark-green);
 }
+
 .footer .footer-content {
   display: flex;
   flex-direction: column;
   gap: 15px;
   /* width: 33.33%; */
 }
+
 .footer .footer-content .subtitle {
   color: var(--white) !important;
 }
@@ -596,6 +592,9 @@ gap: 3vh;
 }
 .subscribe-inputs {
   display: flex;
+  /* flex-wrap: wrap; */
+  gap: 10px;
+  align-items: flex-end;
   flex-shrink: 0;
 }
 .subscribe-inputs input {
@@ -725,23 +724,24 @@ input[type="checkbox"]:checked + .terms:before {
 }
 
 @media only screen and (max-width: 800px) {
-  
   .footer {
     flex-wrap: wrap;
     align-items: flex-end;
   }
   .footer-content:nth-of-type(3) {
-    flex-direction: row-reverse;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
   }
+  
   .bg-image {
     flex: 1;
     top: 40vh;
     margin: 0 auto;
     z-index: -1;
   }
-} 
+}
 .menu-icon {
   display: none;
 }
@@ -796,7 +796,7 @@ input[type="checkbox"]:checked + .terms:before {
   }
   .motivation {
     width: 100%;
-    padding: 0 20vw;
+    padding: 0 10vw;
     text-align: center;
   }
   .projects {
@@ -815,5 +815,16 @@ input[type="checkbox"]:checked + .terms:before {
   }
   .message-us {
     width: 100%;
+  }
+  .subscribe-inputs{
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 532px) {
+  
+  .back-to-top{
+ display: none;
   }
 }
