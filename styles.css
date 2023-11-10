@@ -78,8 +78,10 @@ main::after {
   flex-shrink: 0;
   background: var(--dark-green);
 }
+
 .home {
-  position: relative;
+  transform: translateY(-100%);
+  /* position: relative; */
 }
 header {
   max-width: calc(1024px - 10vw);
@@ -89,6 +91,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 0 5vw;
+  /* border: 1px solid blue; */
 }
 .logo {
   color: var(--black);
@@ -734,7 +737,7 @@ input[type="checkbox"]:checked + .terms:before {
     width: 100%;
     justify-content: space-between;
   }
-  
+
   .bg-image {
     flex: 1;
     top: 40vh;
@@ -816,15 +819,17 @@ input[type="checkbox"]:checked + .terms:before {
   .message-us {
     width: 100%;
   }
-  .subscribe-inputs{
+  .subscribe-inputs {
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
   }
+  .footer {
+    align-items: center;
+  }
 }
 @media screen and (max-width: 532px) {
-  
-  .back-to-top{
- display: none;
+  .back-to-top {
+    display: none;
   }
 }
